@@ -1,25 +1,18 @@
-import java.io.File;
 import java.util.Scanner;
+
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class Main {
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            int validFileCount = 0;
-            while (true) {
-                System.out.print("Введите путь к файлу: ");
-                String filePath = scanner.nextLine();
-                File file = new File("C:/Users/IYurevich/File.txt");
-                boolean fileExists = file.exists();
-                 boolean isFile = file.isFile();
-                if (!fileExists || !isFile) {
-                System.out.println("Файл не существует или указанный путь является путём к папке, а не к файлу.");
-                continue;
-                } else {
-                validFileCount++;
-                System.out.println("Путь указан верно. Это файл номер " + validFileCount);
-                }
-            }
-        }
+    public static void main(String[] args) {
+        System.out.println("Введите первое число:");
+        int firstNumber = new Scanner(System.in) .nextInt();
+        System.out.println("Введите второе число:");
+        int secondNumber = new Scanner(System.in) .nextInt();
+        System.out.println("Сумма: "+ (firstNumber + secondNumber));
+        System.out.println("Разность: "+ (firstNumber - secondNumber));
+        System.out.println("Произведение: "+ (firstNumber * secondNumber));
+        System.out.println("Частное : "+ ((double)firstNumber / secondNumber));
 
-
+    }
 
 }
